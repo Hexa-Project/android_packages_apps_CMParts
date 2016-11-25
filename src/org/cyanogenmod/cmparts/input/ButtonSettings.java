@@ -164,13 +164,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
-        final int deviceKeys = getResources().getInteger(
-                com.android.internal.R.integer.config_deviceHardwareKeys);
         final int deviceWakeKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareWakeKeys);
 
         final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
-        final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
         final boolean hasBackKey = (deviceKeys & KEY_MASK_BACK) != 0;
         final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
         final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
