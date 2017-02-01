@@ -131,7 +131,7 @@ public class LiveDisplay extends SettingsPreferenceFragment implements Searchabl
         int adaptiveMode = mLiveDisplayManager.getMode();
 
         mLiveDisplay = (ListPreference) findPreference(KEY_LIVE_DISPLAY);
-        mLiveDisplay.setValue(String.valueOf(0));
+        mLiveDisplay.setValue(0);
 
         mModeEntries = res.getStringArray(
                 org.cyanogenmod.platform.internal.R.array.live_display_entries);
