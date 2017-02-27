@@ -62,6 +62,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
     private CheckBoxPreference mSilentPref;
     private CheckBoxPreference mVoiceAssistPref;
     private CheckBoxPreference mAssistPref;
+	private CheckBoxPreference mEmergencyPref;
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
@@ -106,6 +107,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
                 mSilentPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_VOICEASSIST);
             } else if (action.equals(GLOBAL_ACTION_KEY_ASSIST)) {
                 mSilentPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_ASSIST);
+			} else if  (action.equals(GLOBAL_ACTION_KEY_EMERGENCY)) {
+                mEmergencyPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_EMERGENCY);
             }
         }
 
@@ -165,6 +168,10 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
             mAssistPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_ASSIST));
         }
 
+        if (mEmergencyPref != null) {
+            mEmergencyPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_EMERGENCY));
+        }
+
         updatePreferences();
     }
 
@@ -217,6 +224,9 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
         } else if (preference == mAssistPref) {
             value = mAssistPref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_ASSIST);
+		}  else if (preference == mEmergencyPref) {
+            value = mEmergencyPref.isChecked();
+            updateUserConfig(value, GLOBAL_ACTION_KEY_EMERGENCY);
 
         } else {
             return super.onPreferenceTreeClick(preference);

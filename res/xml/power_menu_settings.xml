@@ -68,5 +68,10 @@
         android:key="assist"
         android:title="@string/power_menu_sound_title"
         android:defaultValue="true" />
+		
+    <CheckBoxPreference
+        android:key="emergency"
+        android:title="@string/power_menu_emergency_title"
+        android:defaultValue="true" />
 
 </PreferenceScreen>
