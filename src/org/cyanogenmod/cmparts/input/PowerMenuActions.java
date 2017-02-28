@@ -50,6 +50,7 @@ import static com.android.internal.util.cm.PowerMenuConstants.GLOBAL_ACTION_KEY_
 import static com.android.internal.util.cm.PowerMenuConstants.GLOBAL_ACTION_KEY_SILENT;
 import static com.android.internal.util.cm.PowerMenuConstants.GLOBAL_ACTION_KEY_USERS;
 import static com.android.internal.util.cm.PowerMenuConstants.GLOBAL_ACTION_KEY_VOICEASSIST;
+import static com.android.internal.util.cm.PowerMenuConstants.GLOBAL_ACTION_KEY_EMERGENCY;
 
 public class PowerMenuActions extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
     final static String TAG = "PowerMenuActions";
