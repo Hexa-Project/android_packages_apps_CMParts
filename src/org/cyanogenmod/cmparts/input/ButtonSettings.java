@@ -508,11 +508,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mHomeLongPressAction) {
-            handleActionListChange((ListPreference) preference, newValue,
+            handleListChange((ListPreference) preference, newValue,
                     CMSettings.System.KEY_HOME_LONG_PRESS_ACTION);
             return true;
         } else if (preference == mHomeDoubleTapAction) {
-            handleActionListChange((ListPreference) preference, newValue,
+            handleListChange((ListPreference) preference, newValue,
                     CMSettings.System.KEY_HOME_DOUBLE_TAP_ACTION);
             return true;
         } else if (preference == mMenuPressAction) {
